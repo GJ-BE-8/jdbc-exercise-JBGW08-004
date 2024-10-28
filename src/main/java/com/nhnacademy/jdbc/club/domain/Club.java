@@ -10,6 +10,7 @@ public class Club {
     private final LocalDateTime clubCreatedAt;
 
     public Club(String clubId, String clubName) {
+
         this(clubId,clubName,LocalDateTime.now());
     }
 
