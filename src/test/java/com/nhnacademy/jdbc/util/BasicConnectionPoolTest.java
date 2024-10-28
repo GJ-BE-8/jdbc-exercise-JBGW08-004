@@ -21,12 +21,22 @@ class BasicConnectionPoolTest {
     @BeforeAll
     static void setUp() {
         //todo#0 - jdbcUrl, username, password를 설정하세요
-        basicConnectionPool = new BasicConnectionPool(com.mysql.cj.jdbc.Driver.class.getName(),"","","",5);
-    }
+        String jdbcUrl = "jdbc:mysql://133.186.241.167:3306/nhn_academy_4";
+            String username = "nhn_academy_4";
+            String password = "7am#IlCAwnS$3oms";
+
+            basicConnectionPool = new BasicConnectionPool(
+                    com.mysql.cj.jdbc.Driver.class.getName(),
+                    jdbcUrl,
+                    username,
+                    password,
+                    5
+            );
+        }
 
     @AfterAll
     static void connectionClose() throws SQLException {
-        basicConnectionPool.distory();
+        basicConnectionPool.destory();
     }
 
     @Test
