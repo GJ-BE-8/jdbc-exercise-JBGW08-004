@@ -43,7 +43,7 @@ public class ClubRepositoryImpl implements ClubRepository {
     @Override
     public int save(Connection connection, Club club) {
         //todo#4 club 생성, executeUpdate() 결과를 반환
-        String sql = "insert into jdbc_club set club_id=?, club_name=? ";
+        String sql = "insert into jdbc_club (club_id, club_name) values (?, ?)";
 
         try(PreparedStatement psmt = connection.prepareStatement(sql)) {
             psmt.setString(1, club.getClubId());

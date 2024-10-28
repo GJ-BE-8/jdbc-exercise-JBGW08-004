@@ -60,7 +60,7 @@ public class ClubRegistrationRepositoryImpl implements ClubRegistrationRepositor
                                 rs.getString("student_id"),
                                 rs.getString("student_name"),
                                 rs.getString("club_id"),
-                                rs.getString("cluc_name")
+                                rs.getString("club_name")
                         )
                 );
             }
